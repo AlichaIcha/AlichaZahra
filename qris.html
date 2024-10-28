@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANA KAMI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .payment-details {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .payment-details img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .account-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+        table {
+            margin: 20px auto;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="payment-details">
+            <img src="https://c.top4top.io/p_3223ixqoz0.jpg" alt="Payment Method">
+            <p>UNTUK MENGAMBIL QRIS SILAHKAN HUB TELEGRAM @AlichaIcha</p>
+            <h2></h2>
+            <table>
+                <tr>
+                    <th>Nomer :</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>Nama :</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                </tr>
+                <tr>
+                     <th>Password Membuka :</th>
+                </tr>
+                <tr>
+                     <td>❌ Belum Terdeteksi Membayar</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            var textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            alert("Berhasil Copy Nomer Dana Kami Dan Silahkan Lanjutkan Pembayaran");
+        }
+    </script>
+</body>
+</html>

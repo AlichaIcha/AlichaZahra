@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Saya</title>
+    <script type="text/javascript">
+        window.$crisp=[];
+        window.CRISP_WEBSITE_ID="576d0638-34e8-4e19-a2fe-00874b8f1ab2";
+        (function(){
+            d=document;
+            s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+        
+        function toggleMusic() {
+            var audio = document.getElementById("myAudio");
+            var button = document.getElementById("musicButton");
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "🎵";
+            } else {
+                audio.pause();
+                button.textContent = "🎵";
+            }
+        }
+
+        function goToAnotherPage() {
+            window.location.href = "home.html"; // Ganti dengan URL web yang diinginkan
+        }
+    </script>
+    <style>
+        .crisp-client {
+            width: 100px; /* Ubah ukuran sesuai kebutuhan */
+            height: 20px; /* Ubah ukuran sesuai kebutuhan */
+        }
+        
+        .colorful-text {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                color: red;
+            }
+            25% {
+                color: blue;
+            }
+            50% {
+                color: green;
+            }
+            75% {
+                color: orange;
+            }
+            100% {
+                color: purple;
+            }
+        }
+
+        table {
+            width: 50%; /* Lebar tabel */
+            margin: auto; /* Pusatkan tabel */
+            border-collapse: collapse;
+            background-color: black; /* Ubah warna latar belakang tabel menjadi hitam */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center; /* Pusatkan teks di dalam sel */
+            color: white; /* Ubah warna teks menjadi putih */
+        }
+
+        #videoBackground {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover; /* Menyesuaikan video ke ukuran layar */
+        }
+
+        #centerButton {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Sesuaikan dengan kebutuhan */
+        }
+    </style>
+</head>
+<body>
+
+<video id="videoBackground" autoplay loop muted>
+    <source src="https://j.top4top.io/m_3004vtz900.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<audio id="myAudio" loop>
+    <source src="https://f.top4top.io/m_29186mmlb0.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<table>
+    <tr>
+        <td>
+            <div class="colorful-text">Hacker By Alicha X Fadlan Untuk Chat Menual Saya Untuk Meminta Pin Teken aja tombol chat di pojok kanan bawah kalo mau dapat pin otomatis langsung teken aja BAYAR  OTOMATIS</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="musicButton" onclick="toggleMusic()">Nyalakan Musik 🎵</button>
+        </td>
+    </tr>
+</table>
+
+<div id="centerButton">
+    <button onclick="goToAnotherPage()">      BAYAR OTOMATIS DI SINI.     </button>
+</div>
+
+<!-- Konten halaman Anda di sini -->
+
+</body>
+</html>

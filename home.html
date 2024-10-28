@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Font family */
+            padding: 20px;
+        }
+        h1 {
+            color: #800080; /* Warna ungu tua untuk judul */
+        }
+        .product-list {
+            background-color: #f5f5f5; /* Warna latar belakang daftar produk */
+            padding: 20px;
+            border-radius: 10px; /* Border radius */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow */
+        }
+        .product {
+            border: 2px solid black; /* Border hitam */
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff; /* Warna putih untuk background kotak produk */
+            border-radius: 10px; /* Border radius */
+        }
+        .product h2 {
+            margin-top: 0;
+            font-size: 24px; /* Ukuran font judul */
+        }
+        .product button {
+            padding: 10px 20px; /* Padding tombol */
+            font-size: 16px; /* Ukuran font tombol */
+            background-color: #800080; /* Warna ungu tua untuk tombol */
+            color: white; /* Warna teks putih */
+            border: none; /* Hilangkan border */
+            border-radius: 5px; /* Border radius */
+            cursor: pointer; /* Kursor tangan saat mengarahkan ke tombol */
+            transition: background-color 0.3s; /* Efek transisi ketika tombol berubah warna */
+        }
+        .product button:hover {
+            background-color: #6A5ACD; /* Warna ungu lebih tua saat tombol dihover */
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #800080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .search-container button:hover {
+            background-color: #6A5ACD;
+        }
+        .social-icons {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .social-icons img {
+            width: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 50%; /* Membuat ikon bulat */
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Pembayaran</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Cari Metode Pembayaran...">
+        <button onclick="searchProduct()">Cari</button>
+    </div>
+
+    <div class="product-list">
+        <div class="product">
+            <h2>DANA</h2>
+            <button onclick="redirectToOtherWeb('dana.html')">BAYAR</button>
+        </div>
+        <div class="product">
+            <h2>QRIS ALL PAYMENT</h2>
+            <button onclick="redirectToOtherWeb('qris.html')">BAYAR</button>
+        </div>
+    </div>
+
+    <h1>Anda Dapat Membayar Secara Menual Ke Kontak Kami Di Bawah Ini,Jika Bayar Otomatis Kalian Bisa Transfer Kami Melalui Payment Di Atas Dan Nanti Jika Sudah Ada Saldo Masuk Otomatis Kami Mengirimkan Password Untuk Membuka Payment Di Bawah Nama Payment Kami</h1>
+    <div class="social-icons">
+        <img src="https://telegra.ph/file/5966f6bb2bc18f54cd23d.jpg" alt="WhatsApp" onclick="redirectToOtherWeb('https://wa.me/6281400346604')">
+        <img src="https://telegra.ph/file/5bb2f929628c0b316f0d3.jpg" alt="Telegram" onclick="redirectToOtherWeb('https://t.me/AlichaIcha')">
+    </div>
+
+    <script>
+        function redirectToOtherWeb(url) {
+            window.location.href = url;
+        }
+
+        function searchProduct() {
+            var input, filter, productList, products, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            productList = document.getElementsByClassName("product-list")[0];
+            products = productList.getElementsByClassName("product");
+
+            for (i = 0; i < products.length; i++) {
+                txtValue = products[i].getElementsByTagName("h2")[0].textContent || products[i].getElementsByTagName("h2")[0].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    products[i].style.display = "";
+                } else {
+                    products[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
